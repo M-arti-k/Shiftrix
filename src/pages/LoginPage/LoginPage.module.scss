@@ -1,0 +1,18 @@
+@use '@styles/variables.scss';
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.wrapper {
+    background-color: #fff;
+    padding: 100px;
+    box-shadow: variables.$shadow;
+    border-radius: variables.$normal_radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
