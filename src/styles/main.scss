@@ -1,0 +1,7 @@
+@use './variables.scss';
+
+body {
+    font-size: variables.$normal_size;
+    background-color: variables.$bg_color;
+    font-family: 'Inter', sans-serif;
+}
