@@ -2,6 +2,7 @@ import type { FC, JSX } from "react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import styles from "./Logo.module.scss";
+import clsx from "clsx";
 
 const Logo: FC = (): JSX.Element => {
   const hoursRef = useRef<HTMLDivElement>(null);
@@ -39,11 +40,17 @@ const Logo: FC = (): JSX.Element => {
         <div className={styles["logo-icon__hexagon"]}>
           <div
             ref={hoursRef}
-            className={`${styles["logo-icon__hours"]} ${styles["logo-icon__clock"]}`}
+            className={clsx(
+              styles["logo-icon__hours"],
+              styles["logo-icon__clock"]
+            )}
           ></div>
           <div
             ref={minutesRef}
-            className={`${styles["logo-icon__minutes"]} ${styles["logo-icon__clock"]}`}
+            className={clsx(
+              styles["logo-icon__minutes"],
+              styles["logo-icon__clock"]
+            )}
           ></div>
         </div>
       </div>

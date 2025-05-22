@@ -1,0 +1,10 @@
+@use '@styles/variables.scss';
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: variables.$second_color;
+    border-radius: variables.$normal_radius;
+}

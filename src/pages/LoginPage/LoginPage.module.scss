@@ -8,11 +8,22 @@
 }
 .wrapper {
     background-color: #fff;
-    padding: 100px;
+    padding: 80px;
     box-shadow: variables.$shadow;
     border-radius: variables.$normal_radius;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    & a {
+        margin-bottom: 60px;
+    }
+}
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.mt-70 {
+    margin-top: 70px;
 }

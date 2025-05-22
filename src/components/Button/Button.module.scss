@@ -1,0 +1,29 @@
+@use '@styles/variables.scss';
+
+// Base styles for Button
+.button-base {
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: variables.$small_space;
+    font-weight: variables.$black_weigth;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+// Types of Button
+.long {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: variables.$bigger_radius;
+}
+
+// Colors of Button
+.main {
+    background-color: variables.$main_color;
+    &:hover {
+        background-color: variables.$second_color;
+    }
+}
