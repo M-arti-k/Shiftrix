@@ -10,3 +10,5 @@ export const moduleNameMapper = {
   "^@interfaces/(.*)$": "<rootDir>/src/interfaces/$1",
   "^.+\\.module\\.(css|scss|sass)$": "identity-obj-proxy",
 };
+export const setupFilesAfterEnv = ["<rootDir>/src/setupTests.ts"];
+export const testPathIgnorePatterns = ["/node_modules/", "/dist/"];
