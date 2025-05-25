@@ -13,7 +13,7 @@ const LoginPage: FC = (): JSX.Element => {
     <section className={styles.login}>
       <div className={styles.wrapper}>
         <Logo />
-        <Form method="POST" action="#">
+        <Form method="post" action="#">
           <div className={styles.input}>
             <InputIcon url={emailImageUrl} alt="Email Icon" />
             <Input type="email">Email</Input>

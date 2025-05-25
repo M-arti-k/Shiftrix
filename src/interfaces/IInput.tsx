@@ -1,4 +1,4 @@
 export interface IInput {
-  children: string;
+  children?: string;
   type: string;
 }

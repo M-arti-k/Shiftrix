@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Testing Default Button (type=button, variant=long) Button matches snapshot 1`] = `
+<button
+  class="button-base long undefined"
+  data-testid="Button"
+  type="button"
+>
+  Test
+</button>
+`;

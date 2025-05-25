@@ -1,9 +1,9 @@
 import type { JSX } from "react";
 
-type Method = "POST" | "GET";
+type Method = "post" | "get";
 
 export interface IForm {
   method: Method;
   action: string;
-  children: Array<JSX.Element>;
+  children?: Array<JSX.Element> | JSX.Element;
 }

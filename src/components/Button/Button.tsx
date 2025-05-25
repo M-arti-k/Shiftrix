@@ -11,6 +11,7 @@ const Button: FC<IButton> = ({
 }): JSX.Element => {
   return (
     <button
+      data-testid="Button"
       className={clsx(
         styles["button-base"],
         styles[`${variant}`],

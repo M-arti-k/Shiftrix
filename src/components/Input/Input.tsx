@@ -5,7 +5,12 @@ import styles from "./Input.module.scss";
 const Input: FC<IInput> = ({ type, children }): JSX.Element => {
   return (
     <div className={styles.underline}>
-      <input className={styles.input} type={type} placeholder={children} />
+      <input
+        data-testid="input"
+        className={styles.input}
+        type={type}
+        placeholder={children}
+      />
     </div>
   );
 };

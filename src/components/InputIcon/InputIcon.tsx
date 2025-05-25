@@ -4,8 +4,8 @@ import type { IInputIcon } from "src/interfaces/IInputIcon";
 
 const InputIcon: FC<IInputIcon> = ({ url, alt }): JSX.Element => {
   return (
-    <div className={styles["input-icon"]}>
-      <img src={url} alt={alt} />
+    <div data-testid="input-icon" className={styles["input-icon"]}>
+      <img data-testid="input-image" src={url} alt={alt} />
     </div>
   );
 };
