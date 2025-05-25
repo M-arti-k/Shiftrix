@@ -1,6 +1,6 @@
 import type { FC, JSX } from "react";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import styles from "./Logo.module.scss";
 import clsx from "clsx";
 
@@ -10,20 +10,20 @@ const Logo: FC = (): JSX.Element => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const updateTime = () => setTime(new Date());
+    const updateTime = (): void => setTime(new Date());
 
-    const intervalId = setInterval(updateTime, 60000);
+    const intervalId: NodeJS.Timeout = setInterval(updateTime, 60000);
     updateTime();
 
-    return () => clearInterval(intervalId);
+    return (): void => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
-    const hours = time.getHours() % 12;
-    const minutes = time.getMinutes();
+    const hours: number = time.getHours() % 12;
+    const minutes: number = time.getMinutes();
 
-    const hoursDeg = 30 * hours + 0.5 * minutes;
-    const minutesDeg = 6 * minutes;
+    const hoursDeg: number = 30 * hours + 0.5 * minutes;
+    const minutesDeg: number = 6 * minutes;
 
     if (hoursRef.current) {
       hoursRef.current.style.transform = `translate(-50%, -50%) rotate(${hoursDeg}deg)`;
@@ -35,10 +35,11 @@ const Logo: FC = (): JSX.Element => {
   }, [time]);
 
   return (
-    <Link to="/" className={styles.logo}>
+    <Link data-testid="logo" to="/" className={styles.logo}>
       <div className={styles["logo-icon"]}>
         <div className={styles["logo-icon__hexagon"]}>
           <div
+            data-testid="clock-hours"
             ref={hoursRef}
             className={clsx(
               styles["logo-icon__hours"],
@@ -46,6 +47,7 @@ const Logo: FC = (): JSX.Element => {
             )}
           ></div>
           <div
+            data-testid="clock-minutes"
             ref={minutesRef}
             className={clsx(
               styles["logo-icon__minutes"],

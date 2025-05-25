@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo test Logo\`s snapshot 1`] = `
+<a
+  class="logo"
+  data-discover="true"
+  data-testid="logo"
+  href="/"
+>
+  <div
+    class="logo-icon"
+  >
+    <div
+      class="logo-icon__hexagon"
+    >
+      <div
+        class="logo-icon__hours logo-icon__clock"
+        data-testid="clock-hours"
+        style="transform: translate(-50%, -50%) rotate(97.5deg);"
+      />
+      <div
+        class="logo-icon__minutes logo-icon__clock"
+        data-testid="clock-minutes"
+        style="transform: translate(-50%, -50%) rotate(90deg);"
+      />
+    </div>
+  </div>
+  <p
+    class="logo__name"
+  >
+    Shiftrix 
+    <span>
+      v2.0
+    </span>
+  </p>
+</a>
+`;
